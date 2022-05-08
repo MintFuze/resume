@@ -102,16 +102,12 @@ body {
     width: 334px;
     height: 64px;
     background: #030305;
-    border: 0;
-    box-sizing: border-box;
-    text-align: center;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
     color: #FFFFFF;
     transition: all 0.1s linear;
+
 }
 
 .button:hover{
@@ -143,7 +139,7 @@ body {
 
 .box{
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px 15px 10px 15px;
 }
 
@@ -156,9 +152,11 @@ body {
 .box:nth-child(1)
 {
     margin-right: 15px;
+    width: 905px;
 }
 
-.first-column
+
+.first-box
 {
     max-width: 950px;
 }
@@ -167,6 +165,13 @@ body {
 .main-about-me{
     display: flex;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.link-box
+{
+    display: flex;
+    align-items: center;
 }
 
 .link-list{
@@ -175,7 +180,6 @@ body {
 
 .link-list ul{
     display: flex;
-    justify-content: space-around;
 }
 
 .link{
@@ -194,16 +198,18 @@ body {
     transition: all 0.1s linear;
 }
 
+
 .about-me-list
 {
     margin-top: 15px;
+    display: flex;
 }
 
 .about-me-list li {
 
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 20px 0 15px;
 }
 
 
@@ -222,6 +228,7 @@ body {
     margin: 40px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
 }
 
@@ -298,7 +305,16 @@ body {
 {
     width: 550px;
     margin: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
+
+}
+
+.project-box{
+    transition: all 0.2s linear;
+}
+
+.project-box:hover{
+    transform: scale(1.04);
 
 }
 
@@ -314,7 +330,7 @@ body {
 
 .project-box{
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 10px;
 }
 
@@ -331,7 +347,51 @@ footer{
     max-width: 1150px;
 }
 
+.main-footer img {
+    margin:10px;
+}
+.main-footer .link-box {
+    margin: 0 0 0 50px;
+
+}
+
 .name{
     text-align: end;
     font-weight: bold;
+}
+
+.list-text-logo-img{
+    width: 50px;
+    height: 50px;
+}
+.github{
+    filter: grayscale(100%);
+    transition: all 0.1s linear;
+}
+
+.github:hover{
+    filter: none;
+    transform: scale(1.15);
+}
+
+.telegram{
+    filter: grayscale(100%);
+    transition: all 0.1s linear;
+}
+
+.telegram:hover{
+    filter: none;
+    transform: scale(1.15);
+}
+
+.gmail{
+    width: 52px;
+    height: 52px;
+    filter: grayscale(100%);
+    transition: all 0.1s linear;
+}
+
+.gmail:hover{
+    filter: none;
+    transform: scale(1.15);
 }
