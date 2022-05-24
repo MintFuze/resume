@@ -323,7 +323,7 @@ header {
 
             &:hover .list-animation {
 
-                visibility: visible;
+                opacity: 1;
                 margin: 10px;
 
             }
@@ -345,7 +345,7 @@ header {
 
             .list-animation {
 
-                visibility: hidden;
+                opacity: 0;
                 transition: 0.3s ease;
                 
 
