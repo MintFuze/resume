@@ -1,4 +1,4 @@
-
+  
 
 function onEntry(entry) {
     entry.forEach(change => {

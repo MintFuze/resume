@@ -1,8 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-   
-
+    transition: .3s ease;
 }
 
 
@@ -42,6 +41,7 @@ b {
 h2 {
     font-family: Intro;
     font-size: 2vw;
+    display: flex;
 
 }
 
@@ -88,9 +88,22 @@ header {
 .gradient {
     font-family: Intro;
     color: transparent;
+    display: inline-block;
     -webkit-background-clip: text;
     background-image: linear-gradient(to right, #02F4FC, #1D22CD);
+    background-position: 0 0;
     margin: 1px;
+    animation: showletter 3s forwards;
+    
+}
+
+@keyframes showletter {
+    0%{
+        max-width: 0;
+    }
+    100% {
+      max-width:120px ;
+    }
 }
 
 
@@ -109,6 +122,7 @@ header {
 }
 
 #a-profile {
+  
     font-family: Intro;
     color: black;
     transition: all .3s;
@@ -137,13 +151,14 @@ header {
     -webkit-background-clip: text;
     background-image: linear-gradient(to right, #00adb3, #1D22CD);
     margin-right: 1px;
+ 
 }
 
 
 
 .box {
-    h3{
-        b{
+    h3 {
+        b {
             font-size: 2vw;
         }
     }
@@ -167,7 +182,7 @@ header {
 
 
 
-.first-box {
+.main-box {
     max-width: 950px;
 
 }
@@ -198,7 +213,7 @@ header {
     &:hover {
         cursor: pointer;
         border-bottom: 3px solid #2525c8;
-      
+
     }
 
 }
@@ -215,8 +230,9 @@ header {
     display: flex;
     font-family: Intro;
     font-size: 1vw;
+
     .li {
-      
+
         display: flex;
         align-items: center;
         margin: 0 20px 0 15px;
@@ -227,7 +243,7 @@ header {
 .list-logo-img {
     width: 35px;
     height: 35px;
-    margin-right: 8px;
+    margin-right: 15px;
 
     &img {
         margin-right: 10px;
@@ -264,9 +280,12 @@ header {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        .low-gradient{
+            margin-left: 5px;
+        }
 
         img {
-            margin-right: 10px;
+            margin-right: 15px;
         }
     }
 }
@@ -307,19 +326,20 @@ header {
 .skills-list {
     margin: 15px 0 15px 0;
     height: 100px;
-    max-width: fit-content ;
+    max-width: fit-content;
     font-size: .8vw;
-    
 
-    ul{
-    
+
+    ul {
+
         display: flex;
+        flex-wrap: wrap;
 
-       
+
         .list-container {
             height: 100%;
             text-align: center;
-            
+
 
             &:hover .list-animation {
 
@@ -334,12 +354,12 @@ header {
             font-family: Intro;
             display: flex;
             align-items: center;
-            
+
             filter: grayscale(100%);
 
             &:hover {
                 filter: none;
-                opacity: 100%;
+                opacity: 1;
 
             }
 
@@ -347,7 +367,7 @@ header {
 
                 opacity: 0;
                 transition: 0.3s ease;
-                
+
 
             }
 
@@ -374,36 +394,36 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    
+
 
 
     .project-box {
         border-radius: 5px;
         margin: 5px;
-        
+
 
     }
 
-    .project {    
-        
+    .project {
+
         .project-img {
             max-width: 600px;
             max-height: 400px;
-           border: 1px solid #808080;
+            border: 1px solid #808080;
             transition: all 0.3s;
             border-radius: 5px;
-            margin:15px;
-            
-            
-            
-            &:hover{
-              
+            margin: 15px;
+
+
+
+            &:hover {
+
                 border-radius: 7px;
                 transform: scale(1.1);
-              
-                
-              
-                
+
+
+
+
             }
         }
 
@@ -418,21 +438,23 @@ footer {
     border-top: 1px solid #2525c8;
 
 
-.footer-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1150px;
-    img {
-        max-width: 12vw;
+    .footer-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1150px;
+
+        img {
+            max-width: 12vw;
+
+        }
+
+        .name {
+            text-align: end;
+            font-weight: bold;
+        }
 
     }
-    .name {
-        text-align: end;
-        font-weight: bold;
-    }
-
-}
 }
 
 
@@ -470,4 +492,3 @@ footer {
     transition: all 1.5s;
     transform: translateY(0%);
 }
-

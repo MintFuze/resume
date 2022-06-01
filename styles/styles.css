@@ -1,6 +1,9 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
 }
 
 @font-face {
@@ -38,6 +41,10 @@ b {
 h2 {
   font-family: Intro;
   font-size: 2vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container {
@@ -76,12 +83,34 @@ header {
 .gradient {
   font-family: Intro;
   color: transparent;
+  display: inline-block;
   -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left top, right top, from(#02F4FC), to(#1D22CD));
   background-image: -webkit-linear-gradient(left, #02F4FC, #1D22CD);
   background-image: -o-linear-gradient(left, #02F4FC, #1D22CD);
   background-image: linear-gradient(to right, #02F4FC, #1D22CD);
+  background-position: 0 0;
   margin: 1px;
+  -webkit-animation: showletter 3s forwards;
+          animation: showletter 3s forwards;
+}
+
+@-webkit-keyframes showletter {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 120px;
+  }
+}
+
+@keyframes showletter {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 120px;
+  }
 }
 
 .home-text {
@@ -157,7 +186,7 @@ header {
   opacity: 0.6;
 }
 
-.first-box {
+.main-box {
   max-width: 950px;
 }
 
@@ -232,7 +261,7 @@ header {
 .list-logo-img {
   width: 35px;
   height: 35px;
-  margin-right: 8px;
+  margin-right: 15px;
 }
 
 .list-logo-imgimg {
@@ -291,8 +320,12 @@ header {
   margin-bottom: 10px;
 }
 
+.education-list li .low-gradient {
+  margin-left: 5px;
+}
+
 .education-list li img {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .main-experience {
@@ -344,6 +377,9 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .skills-list ul .list-container {
@@ -352,7 +388,7 @@ header {
 }
 
 .skills-list ul .list-container:hover .list-animation {
-  visibility: visible;
+  opacity: 1;
   margin: 10px;
 }
 
@@ -373,11 +409,11 @@ header {
 .skills-list ul li:hover {
   -webkit-filter: none;
           filter: none;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .skills-list ul li .list-animation {
-  visibility: hidden;
+  opacity: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
